@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <title>SPA with Side Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="bangers-regular" id="menu-list">
+                <li><a href="#home" onclick="navigate(event, 'home')">Home</a></li>
+                <li><a href="#about" onclick="navigate(event, 'about')">About Me</a></li>
+                <li><a href="#work" onclick="navigate(event, 'work')">My Work</a></li>
+                <li><a href="#skills" onclick="navigate(event, 'skills')">My Skills</a></li>
+                <li><a href="#resume" onclick="navigate(event, 'resume')">Resume</a></li>
+                <li><a href="#contact" onclick="navigate(event, 'contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 class="section bangers-regular section-head" id="my-name">Chad Bowler</h1>
+            <p>Digital Superhero</p>
+        </section>
+        <section id="about" class="section section-head bangers-regular">
+            <h1>About</h1>
+            <p>This is the about page.</p>
+        </section>
+        <section id="work" class="section section-head bangers-regular">
+            <h1>About</h1>
+            <p>This is the about page.</p>
+        </section>
+        <section id="skills" class="section section-head bangers-regular">
+            <h1>About</h1>
+            <p>This is the about page.</p>
+        </section>
+        <section id="resume" class="section section-head bangers-regular">
+            <h1>About</h1>
+            <p>This is the about page.</p>
+        </section>
+        <section id="contact" class="section section-head bangers-regular">
+            <h1>Contact</h1>
+            <p>Contact us at contact@example.com.</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
