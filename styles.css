@@ -129,6 +129,121 @@ main {
     background-repeat: no-repeat;
     /* border: 5px solid blue; */
  }
+ .work-image {
+    width: 50%;
+    height: 600px;
+    background-image: url('images/superchad_work_600.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 5px solid blue; */
+ }
+ .projects {
+    /* border: 5px solid blue; */
+    height: 45%;
+    display: flex;
+ }
+ .project {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    a {
+        margin: auto;
+    }
+}
+.project-title {
+    color: red;
+    font-size: 4rem;
+}
+.project-description {
+    color: white;
+    font-size: 1.8rem;
+    padding: 12px;
+    margin: auto;
+}
+.project-image {
+    width: 80%;
+    height: 40%;
+    
+}
+ #project-image-1{
+    width: 100%;
+    /* margin: auto; */
+    height: 100%;
+    background-image: url('images/project_images/Productivity_Ninja_Screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-2{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/employ-me-now-screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-3{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/meal_prep_screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-4{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/blog_screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .gh-link {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+ }
+ .gh-logo {
+    color: white;
+    margin: auto;
+    height: 10%;
+    width: 10%;
+    background-image: url('images/project_images/github-mark-white.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+.skills {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+.skill-list {
+    font-size: 4rem;
+    width: 50%;
+    padding: 20px;
+}
+#skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.skills-image {
+    height: 70%;
+    width: 100%;
+    background-image: url('images/superchad_skills.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 #contact {
     background-color: #000000;
