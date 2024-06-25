@@ -69,3 +69,23 @@ for (const project of projects) {
     `
     projectContainer.appendChild(newProject)
 }
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your service ID
+    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            alert('Email sent successfully!');
+            document.getElementById('email-form').style.display = 'none';
+        }, (err) => {
+            alert('Failed to send email. Please try again.');
+            console.log(JSON.stringify(err));
+        });
+});
+
+function openEmailForm() {
+document.getElementById('email-form').style.display = 'block';
+}

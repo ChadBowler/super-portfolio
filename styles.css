@@ -227,7 +227,7 @@ main {
     justify-content: baseline;
 }
 .skill-list {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 50%;
     padding: 20px;
 }
@@ -244,7 +244,31 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.resume-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    height: 100%;
+}
+.resume-image {
+    height: 60%;
+    width: 60%;
+    background-image: url('images/superchad_resume_img.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.resume-span {
+    color: red;
+    font-size: 4rem;
+}
+.download-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+}
 #contact {
     background-color: #000000;
     color: red;
@@ -254,4 +278,89 @@ main {
     font-weight: 400;
     font-style: normal;
   }
+  .download-link {
+    text-decoration: none;
+    color: #000000;
+    padding-top: 15%;
+  }
+  .download-button {
+    height: 60px;
+    width: 140px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: red;
+    border-radius: 20px;
+  }
+  .down-arrow-container {
+    position: relative;
+  }
+
+  #down-arrow {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 5%;
+    left: 16.5%;
+    background: red;
+  }
+  /* #right-arrow:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  } */
+  #down-arrow:before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid red;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+
+  #email-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+#email-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#email-form label {
+    margin-top: 10px;
+}
+
+#email-form input, #email-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#email-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
   
