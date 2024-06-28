@@ -1,5 +1,22 @@
 const projectContainer = document.getElementById('projects');
+const menuList = document.getElementById('menu-list');
 
+const serviceID = process.env.SERVICE_ID;
+const templateID = process.env.TEMPLATE_ID;
+
+console.log(serviceID);
+
+
+// function changeActive(section) {
+//     for (const li of menuList.children) {
+//         if (li.children[0].classList.contains('active')) {
+//             li.children[0].classList.remove('active')
+//         }
+//         if (li.children[0].href.split('#')[1] == `${section.id}`) {
+//             // li.children[0].classList.add('active')
+//         }
+//     }
+// }
 
 function navigate(event, sectionId) {
     event.preventDefault();
@@ -7,6 +24,7 @@ function navigate(event, sectionId) {
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
+    // changeActive(section)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,23 +66,21 @@ const projects = [
 ]
 
 for (const project of projects) {
-    console.log(project.title);
+    // console.log(project.title);
     const newProject = document.createElement('div')
     newProject.classList.add("project")
     newProject.setAttribute("id", `project-${project.id}`)
     newProject.innerHTML = `
         <h2 class="project-title">${project.title}</h2>
-        <a class="project-image" href="${project.deployedLink}">
+        <a class="project-image" href="${project.deployedLink}" target="_blank">
             <div id="project-image-${project.id}"></div>
         </a>
         
         <p class="project-description">${project.description}</p>
         <div class="gh-link">
-            
-            <a href="${project.githubLink}">
+            <a href="${project.githubLink}" target="_blank">
                 <div class="gh-logo"></div>
             </a>
-            Github
         </div>
     `
     projectContainer.appendChild(newProject)
@@ -73,8 +89,8 @@ for (const project of projects) {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your service ID
-    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
+    // const serviceID = env.SERVICE_ID;
+    // const templateID = env.TEMPLATE_ID;
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
@@ -86,6 +102,28 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         });
 });
 
-function openEmailForm() {
-document.getElementById('email-form').style.display = 'block';
-}
+// function openEmailForm() {
+// document.getElementById('email-form').style.display = 'block';
+// }
+
+    // Intersection Observer to highlight active section
+const sections = document.querySelectorAll('.section');
+const options = {
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        const navLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+        if (entry.isIntersecting) {
+            navLink.classList.add('active');
+        } else {
+            navLink.classList.remove('active');
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+// });

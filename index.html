@@ -8,7 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Chad Bowler</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"  type="text/javascript"></script>
+    <script  type="text/javascript">
+        (function() {
+            emailjs.init(process.env.PUBLIC_ID);
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -63,7 +68,7 @@
                             <li>Python</li>
                             <li>React</li>
                             <li>Responsive Applications</li>
-                            <li>MondoDB</li>
+                            <li>MongoDB</li>
                             <li>Machine Learning Training</li>
                         </ul>
                     </div>
@@ -85,23 +90,41 @@
             <div class="resume-container">
                 <div class="resume-image"></div>
                 <div class="download-container">
-                    <span class="resume-span">Download Resume Here</span>
+                    <span class="resume-span">Download My Resume Here</span>
                     <div class="down-arrow-container">
                         <div id="down-arrow"></div>
                     </div>
-                    
                     <a class="download-link" href="/files/Chad_Bowler_Resume_.pdf" download>
                         <div class="download-button">Download</div>
-                        </a>
+                    </a>
+                    <p class="bangers-regular" style="color: red; font-size: 2.5rem;">Check out these links to more of my work!</p>
+                    <div class="outside-links-container">
+                        
+                        <div class="gh-link">
+                            <p>Github</p>
+                            <a href="https://github.com/ChadBowler" target="_blank">
+                                <div class="gh-logo" style="height: 70%; width: 70%;"></div>
+                            </a>
+                        </div>
+                        <div class="cp-link">
+                            <p>Codepen</p>
+                            <a href="https://codepen.io/cbowlerdev" target="_blank">
+                                <div class="cp-logo"></div>
+                            </a>
+                        </div>
+                        <div class="bd-link">
+                            <p>Boot.dev</p>
+                            <a href="https://www.boot.dev/u/baggytravel50" target="_blank">
+                                <div class="bd-logo"></div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-            
-            <p>Download my resume here.</p>
         </section>
         <section id="contact" class="section bangers-regular">
             <h1 class="bangers-regular section-head red-shadow">Contact</h1>
-            <div id="email-form" style="display: none;">
+            <div id="email-form">
                 <form id="contact-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
