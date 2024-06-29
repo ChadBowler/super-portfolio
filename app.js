@@ -1,25 +1,5 @@
-// import { env } from 'node:process';
 const projectContainer = document.getElementById('projects');
 const menuList = document.getElementById('menu-list');
-
-// const serviceID = env.SERVICE_ID;
-// const templateID = env.TEMPLATE_ID;
-
-// console.log(serviceID);
-
-// (function() {
-//     emailjs.init(env.PUBLIC_ID);
-// })();
-// function changeActive(section) {
-//     for (const li of menuList.children) {
-//         if (li.children[0].classList.contains('active')) {
-//             li.children[0].classList.remove('active')
-//         }
-//         if (li.children[0].href.split('#')[1] == `${section.id}`) {
-//             // li.children[0].classList.add('active')
-//         }
-//     }
-// }
 
 function navigate(event, sectionId) {
     event.preventDefault();
@@ -27,7 +7,6 @@ function navigate(event, sectionId) {
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
-    // changeActive(section)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,7 +48,6 @@ const projects = [
 ]
 
 for (const project of projects) {
-    // console.log(project.title);
     const newProject = document.createElement('div')
     newProject.classList.add("project")
     newProject.setAttribute("id", `project-${project.id}`)
@@ -89,27 +67,56 @@ for (const project of projects) {
     projectContainer.appendChild(newProject)
 }
 
-// document.getElementById('contact-form').addEventListener('submit', function(event) {
-//     event.preventDefault();
+document.getElementById('email-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const thankYouMessage = document.getElementById('thank-you-message');
+    const errorMessage = document.getElementById('error-message');
+    thankYouMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    const userId = 's03Pqhhh-bJcuwiEW';
+    const serviceId = 'service_5n4fh5s';
+    const templateId = 'template_dj8bqok';
+    const emailParams = {
+        from_name: data.name,
+        user_email: data.email,
+        message: data.message,
+        };
+        try {
+        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+            service_id: serviceId,
+            template_id: templateId,
+            user_id: userId,
+            template_params: emailParams,
+            }),
+        });
+    
+        if (response.ok) {
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            thankYouMessage.style.display = 'block';
+            nameField.value = "";
+            emailField.value = "";
+            messageField.value = "";
+        } else {
+            const error = await response.json();
+            errorMessage.style.display = 'block';
+            console.log(error);
+        }
+        } catch (error) {
+            console.log(error);
+        }
 
-//     // const serviceID = env.SERVICE_ID;
-//     // const templateID = env.TEMPLATE_ID;
+});
 
-//     emailjs.sendForm(serviceID, templateID, this)
-//         .then(() => {
-//             alert('Email sent successfully!');
-//             document.getElementById('email-form').style.display = 'none';
-//         }, (err) => {
-//             alert('Failed to send email. Please try again.');
-//             console.log(JSON.stringify(err));
-//         });
-// });
-
-// function openEmailForm() {
-// document.getElementById('email-form').style.display = 'block';
-// }
-
-    // Intersection Observer to highlight active section
+// Intersection Observer to highlight active section
 const sections = document.querySelectorAll('.section');
 const options = {
     threshold: 0.5
@@ -129,4 +136,3 @@ const observer = new IntersectionObserver((entries, observer) => {
 sections.forEach(section => {
     observer.observe(section);
 });
-// });
