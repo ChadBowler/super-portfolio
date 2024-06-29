@@ -1,3 +1,5 @@
-(function() {
-    emailjs.init(process.env.PUBLIC_ID);
-})();
+// import { env } from 'node:process';
+
+// (function() {
+//     emailjs.init(env.PUBLIC_ID);
+// })();

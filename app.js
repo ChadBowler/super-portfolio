@@ -1,14 +1,15 @@
+// import { env } from 'node:process';
 const projectContainer = document.getElementById('projects');
 const menuList = document.getElementById('menu-list');
 
-const serviceID = process.env.SERVICE_ID;
-const templateID = process.env.TEMPLATE_ID;
+// const serviceID = env.SERVICE_ID;
+// const templateID = env.TEMPLATE_ID;
 
-console.log(serviceID);
+// console.log(serviceID);
 
-(function() {
-    emailjs.init(process.env.PUBLIC_ID);
-})();
+// (function() {
+//     emailjs.init(env.PUBLIC_ID);
+// })();
 // function changeActive(section) {
 //     for (const li of menuList.children) {
 //         if (li.children[0].classList.contains('active')) {
@@ -88,21 +89,21 @@ for (const project of projects) {
     projectContainer.appendChild(newProject)
 }
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
 
-    // const serviceID = env.SERVICE_ID;
-    // const templateID = env.TEMPLATE_ID;
+//     // const serviceID = env.SERVICE_ID;
+//     // const templateID = env.TEMPLATE_ID;
 
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            alert('Email sent successfully!');
-            document.getElementById('email-form').style.display = 'none';
-        }, (err) => {
-            alert('Failed to send email. Please try again.');
-            console.log(JSON.stringify(err));
-        });
-});
+//     emailjs.sendForm(serviceID, templateID, this)
+//         .then(() => {
+//             alert('Email sent successfully!');
+//             document.getElementById('email-form').style.display = 'none';
+//         }, (err) => {
+//             alert('Failed to send email. Please try again.');
+//             console.log(JSON.stringify(err));
+//         });
+// });
 
 // function openEmailForm() {
 // document.getElementById('email-form').style.display = 'block';
