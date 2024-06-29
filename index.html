@@ -159,7 +159,7 @@
             const result = await response.json();
             alert(result.message);
           } catch (error) {
-            alert('Failed to send message.');
+            alert(`Failed to send message. ${error.message}`);
           }
         });
       </script>

@@ -33,7 +33,7 @@ export default async (req, res) => {
       user_email: email,
       message: message,
     };
-
+    console.log('made it to email.js try block');
     try {
       const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
