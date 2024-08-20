@@ -6,8 +6,41 @@ body {
     display: flex;
     background-color: #000000;
 }
-
+main {
+    margin: auto;
+    padding: 0.3rem;
+    width: 100%;
+}
 header {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.active {
+    text-decoration: underline red 5px;
+    font-size: 2.5rem;
+}
+
+#menu-list {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* header {
     background-color: #333;
     color: #fff;
     padding: 1rem;
@@ -35,7 +68,7 @@ nav a {
 }
 
 main {
-    margin-left: 200px; /* To avoid content being hidden under fixed side nav */
+    margin-left: 200px;
     padding: 1rem;
     width: calc(100% - 200px);
 }
@@ -46,9 +79,9 @@ main {
 
 #menu-list {
     font-size: 3rem;
-}
+} */
 
-.section-head {
+/* .section-head {
     color: red;
     font-size: 7rem;
     
@@ -56,11 +89,21 @@ main {
 }
 .red-shadow {
     text-shadow: 5px 10px rgba(256, 0, 0, 0.3);
+} */
+.section-head {
+    color: red;
+    font-size: 3.5rem;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 0px;
+    text-align: center;
 }
-
-.section {
+.red-shadow {
+    text-shadow: 2px 6px rgba(256, 0, 0, 0.3);
+}
+/* .section {
     padding: 1rem;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
 #home {
@@ -78,22 +121,66 @@ main {
         font-weight: 400;
         font-style: normal;
     }
+} */
+   
+.section {
+    padding: 0.3rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
-#my-name {
+
+#home {
+    background-color: #000000;
+    color: red;
+    position: relative;
+    p {
+        padding: 0.3rem;
+        margin: 0.5rem;
+        position: relative;
+        right: auto;
+        top: auto;
+        color: rgb(255, 255, 152);
+        text-align: center;
+        text-shadow: 0px 0px 20px rgba(255, 239, 19, 1);
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+/* #my-name {
     position: absolute;
     font-size: 11rem;
     top: 15%;
     left: 5%;
+} */
+#my-name {
+    position: relative;
+    font-size: 4rem;
+    margin: auto;
+    top: auto;
+    left: auto;
 }
-
-.hero-image-container {
+/* .hero-image-container {
     width: 100%;
     height: 1300px;
     background-image: url('images/Hero_superchad.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+} */
+.hero-image-container {
+    width: 70%;
+    height: 450px;
+    margin: auto;
+    background-image: url('images/Hero_superchad_450.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 /* .hero-image img {
     width: 100%;
     height: 100%;
@@ -101,6 +188,44 @@ main {
 } */
 
 #about {
+    background-color: #000000;
+    color: red;
+    position: relative;
+}
+#about-section-para {
+    width: 90%;
+    padding-top: 0%;
+    margin-left: auto;
+    color: white;
+    font-size: 1.5rem;
+}
+.section-container {
+    display: flex;
+    flex-direction: column;
+}
+#work-section-head {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+
+}
+ .about-image {
+    width: 70%;
+    height: 450px;
+    background-image: url('images/superchad_work_450.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .work-image {
+    width: 0%;
+    height: 0px;
+    background-image: url('images/superchad_work_600.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+/* #about {
     background-color: #000000;
     color: red;
     position: relative;
@@ -130,8 +255,129 @@ main {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
- }
+ } */
+
  .projects {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+ }
+ .project {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+        margin: auto;
+        height: 20vh;
+    }
+}
+.project-title {
+    color: red;
+    font-size: 2rem;
+    margin: auto;
+    margin-top: 10%;
+}
+.project-description {
+    color: white;
+    font-size: 1rem;
+    padding: 12px;
+    margin: auto;
+    width: 80%;
+}
+.project-image {
+    width: 80%;
+    height: 40%;
+    
+}
+ #project-image-1{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/project_images/Productivity_Ninja_Screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-2{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/employ-me-now-screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-3{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/meal_prep_screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ #project-image-4{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: url('images/project_images/blog_screenshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .gh-link {
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+ }
+ .gh-logo {
+    color: white;
+    margin: auto;
+    height: 50%;
+    width: 30%;
+    background-image: url('images/project_images/github-mark-white.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .cp-link {
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+ }
+ .cp-logo {
+    color: white;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    background-image: url('images/project_images/codepen_logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .bd-link {
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+ }
+ .bd-logo {
+    color: white;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    background-image: url('images/project_images/bootdev-logo-full-small.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ /* .projects {
     height: 45%;
     display: flex;
  }
@@ -243,8 +489,39 @@ main {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
- }
-.skills {
+ } */
+ .skills {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+.skill-list {
+    font-size: 2rem;
+    width: 50%;
+    li {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+}
+#skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* h1 {
+        font-size: 2.5rem;
+    } */
+}
+.skills-image {
+    height: 30vh;
+    width: 100%;
+    background-image: url('images/superchad_skills_450.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* .skills {
     color: red;
     display: flex;
     flex-direction: row;
@@ -271,8 +548,36 @@ main {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 .resume-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+#resume-head {
+    font-size: 2.8rem;
+}
+.resume-image {
+    height: 60%;
+    width: 60%;
+    background-image: url('images/superchad_resume_img.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.resume-span {
+    color: red;
+    font-size: 2rem;
+    display: none;
+}
+.download-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* .resume-container {
     display: flex;
     flex-direction: row;
     justify-content: baseline;
@@ -295,8 +600,59 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-}
+} */
 #contact {
+    background-color: #000000;
+    color: red;
+    margin-top: 70px;
+}
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .download-link {
+    text-decoration: none;
+    color: #000000;
+    padding-top: 15%;
+  }
+  .download-button {
+    height: 60px;
+    width: 140px;
+    margin-top: 10px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: red;
+    border-radius: 20px;
+  }
+  .down-arrow-container {
+    position: relative;
+    margin: auto;
+    height: 40px;
+    width: 50%;
+  }
+
+  #down-arrow {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 46.5%;
+    background: red;
+  }
+  #down-arrow:before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid red;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+/* #contact {
     background-color: #000000;
     color: red;
 }
@@ -341,9 +697,71 @@ main {
     border-top: 20px solid red;
     border-right: 20px solid transparent;
     border-left: 20px solid transparent;
-  }
-
+  } */
   #email-form-container {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: translate(0%, 0%);
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 10px 10px rgba(255, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.outside-links-container {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    color: red;
+    font-size: 2rem;
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#email-form label {
+    margin-top: 10px;
+}
+
+#email-form input, #email-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#email-form-container button {
+    margin-left: 25%;
+    margin-top: 15px;
+    padding: 10px;
+    width: 50%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#thank-you-message {
+    color: green;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#error-message {
+    margin: auto;
+    margin-top: 20px;
+}
+
+  /* #email-form-container {
     position: relative;
     top: 25%;
     left: 50%;
@@ -401,8 +819,280 @@ main {
 #error-message {
     margin: auto;
     margin-top: 20px;
-}
+} */
 
+@media screen and (min-width: 600px){
+    #home {
+        p{
+            font-size: 3rem;
+        }
+    }
+    #my-name {
+        font-size: 6rem;
+    }
+    .section-head {
+        font-size: 4.5rem;
+    }
+    .project {
+        a {
+            height: 30vh;
+            width: 100%;
+        }
+    }
+    .project-title {
+        font-size: 3rem;
+    }
+    .skills {
+        padding: 10px;
+    }
+    .skills-image {
+        height: 640px;
+        width: 70%;
+        margin: auto;
+        background-image: url('images/superchad_skills_640.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #skills h1 {
+            font-size: 4rem;
+    }
+    .gh-link {
+        height: 15vh;
+     }
+
+     .cp-link {
+        height: 15vh;
+     }
+
+     .bd-link {
+        height: 15vh;
+     }
+    
+}
+@media screen and (min-width: 768px){
+
+    #home {
+        p{
+            font-size: 3rem;
+            margin-bottom: 25%;
+            margin-top: -10%;
+        }
+    }
+    #my-name {
+        font-size: 6rem;
+        margin-bottom: 0%;
+    }
+    header {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    main {
+        margin-left: 200px;
+        padding: 1rem;
+        width: calc(100% - 200px);
+    }
+    .section {
+        min-height: 100vh;
+    }
+    .section-head {
+        font-size: 4.5rem;
+    }
+    .hero-image-container {
+        width: 100%;
+        height: 760px;
+        background-image: url('images/Hero_superchad_840.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #about h1 {
+        margin-bottom: 10%;
+    }
+    #about-section-para {
+       font-size: 2.5rem;
+    }
+    .about-image {
+        margin-bottom: 5%;
+    }
+    #work h1 {
+        font-size: 3.5rem;
+    }
+    .project {
+        a {
+            height: 40vh;
+            width: 100%;
+        }
+    }
+    .project-title {
+        font-size: 3rem;
+    }
+    .project-description {
+        font-size: 1.4rem;
+    }
+    #skills h1 {
+        font-size: 3rem;
+}
+    .skills-image {
+        background-position-y: top;
+        width: 85%;
+    }
+    .resume-image {
+        height: 760px;
+        width: 100%;
+        margin-top: -30px; margin-bottom: -30px;
+    }
+    .resume-span {
+        display: block;
+    }
+    #contact h1 {
+        margin-bottom: 45%;
+        margin-top: 20%;
+    }
+    
+}
+@media screen and (min-width: 992px){
+    #my-name {
+        font-size: 8rem;
+    }
+    .hero-image-container {
+        width: 100%;
+        height: 840px;
+        background-image: url('images/Hero_superchad_840.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .about-image {
+        width: 90%;
+        height: 740px;
+        margin-left: 8%;
+        background-image: url('images/superchad_work_800.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+     }
+     .skill-list {
+        font-size: 3.5rem;
+        li {
+            font-size: 2.2rem;
+        }
+    }
+    #resume-head {
+        font-size: 4.5rem;
+    }
+    .resume-image {
+        height: 560px;
+        width: 100%;
+        margin-top: 0px; margin-bottom: 0px;
+    }
+
+}
+@media screen and (min-width: 1200px){
+    .active {
+        text-decoration: underline red 5px;
+        font-size: 3.5rem;
+    }
+    #menu-list {
+        font-size: 3rem;
+    }
+    .section {
+        height: 100vh;
+    }
+    .section-head {
+        font-size: 7rem;
+    }
+    #home {
+        background-color: #000000;
+        color: red;
+        position: relative;
+        p {
+            position: absolute;
+            right: 5%;
+            top: 60%;
+            color: rgb(255, 255, 152);
+            text-shadow: 0px 0px 20px rgba(255, 239, 19, 1);
+            font-size: 6rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+    #my-name {
+        position: absolute;
+        font-size: 11rem;
+        top: 25%;
+        left: 5%;
+    }
+    .hero-image-container {
+        width: 100%;
+        height: 1300px;
+        background-image: url('images/Hero_superchad.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #about-section-container {
+
+    }
+    #about-section-para {
+        width: 50%;
+        /* padding-top: 20%; */
+        margin-left: 6%;
+        color: white;
+        font-size: 3rem;
+    }
+    .section-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .about-image {
+        width: 50%;
+        height: 800px;
+        margin-left: 10px;
+        background-image: url('images/superchad_about.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+     }
+     .work-image {
+        width: 50%;
+        height: 600px;
+        background-image: url('images/superchad_work_600.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+     }
+     .projects {
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+     }
+     .project {
+        width: 100%;
+        height: 100%;
+        margin: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        a {
+            margin: auto;
+        }
+    }
+    #skills {
+        flex-direction: row;
+    }
+
+}
+/* 
 @media screen and (max-width: 1750px) {
     .section-head {
         font-size: 6rem;
@@ -445,7 +1135,6 @@ main {
     .skills {
         margin-top: 100%;
         width: 200%;
-        /* height: 60%; */
         
     }
     .skill-list {
@@ -476,7 +1165,6 @@ main {
         width: calc(100% - 100px);
     }
     header {
-        /* display: none; */
         background-color: #333;
         color: #fff;
         padding: 1rem;
@@ -538,7 +1226,6 @@ main {
         background-color: #000000;
         color: red;
         position: relative;
-        /* padding-top: 15%; */
         p {
             position: absolute;
             right: 5%;
@@ -552,7 +1239,6 @@ main {
         }
     }
     #my-name {
-        /* position: absolute; */
         position: relative;
         font-size: 7rem;
         top: 0%;
@@ -575,8 +1261,6 @@ main {
     }
     #about-section-para {
         width: 90%;
-        /* padding-top: 20%;
-        margin-left: 10%; */
         padding-top: 0%;
         margin-left: auto;
         color: white;
@@ -638,7 +1322,6 @@ main {
         color: red;
         font-size: 3rem;
         margin: auto;
-        /* margin-top: 10%; */
     }
     .project-description {
         color: white;
@@ -739,7 +1422,6 @@ main {
         color: red;
         display: flex;
         flex-direction: row;
-        /* justify-content: baseline; */
         padding-left: 30px;
         margin-top: auto;
         width: 100%;
@@ -855,15 +1537,6 @@ main {
     }
     header {
         display: none;
-        /* background-color: #333;
-        color: #fff;
-        padding: 1rem;
-        position: fixed;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        left: 0;
-        z-index: 1000; */
     }
 
     nav ul {
@@ -955,8 +1628,6 @@ main {
     }
     #about-section-para {
         width: 90%;
-        /* padding-top: 20%;
-        margin-left: 10%; */
         padding-top: 0%;
         margin-left: auto;
         color: white;
@@ -1143,7 +1814,6 @@ main {
     .resume-container {
         display: flex;
         flex-direction: column;
-        /* justify-content: baseline; */
         height: 100%;
         text-align: center;
     }
@@ -1294,4 +1964,4 @@ main {
         width: 100%;
         padding: 5px;
     }
-  }  
+  }   */
