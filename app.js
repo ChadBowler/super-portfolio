@@ -46,7 +46,7 @@ const projects = [
         "id": 3
     }
 ]
-
+// Project insertion
 for (const project of projects) {
     const newProject = document.createElement('div')
     newProject.classList.add("project")
@@ -66,7 +66,7 @@ for (const project of projects) {
     `
     projectContainer.appendChild(newProject)
 }
-
+// emailjs
 document.getElementById('email-form').addEventListener('submit', async function(event) {
     event.preventDefault();
     const thankYouMessage = document.getElementById('thank-you-message');
